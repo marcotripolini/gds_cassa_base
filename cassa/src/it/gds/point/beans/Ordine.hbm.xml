@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 10-feb-2016 12.35.09 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="it.gds.point.beans.Ordine" table="ordini">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <property name="id_carrello" type="java.lang.Long">
+            <column name="id_carrello" />
+        </property>
+        <property name="data" type="java.util.Date">
+            <column name="data" />
+        </property>
+        <property name="id_cliente" type="java.lang.Long">
+            <column name="id_cliente" />
+        </property>
+        <property name="tessera" type="java.lang.String">
+            <column name="tessera" />
+        </property>
+        <property name="importo" type="java.lang.Double">
+            <column name="importo" />
+        </property>
+        <property name="spesesped" type="java.lang.Double">
+            <column name="spesesped" />
+        </property>
+        <property name="totale" type="java.lang.Double">
+            <column name="totale" />
+        </property>
+        <property name="pagato" type="java.lang.Boolean">
+            <column name="pagato" />
+        </property>
+        <property name="pagato_il" type="java.util.Date">
+            <column name="pagato_il" />
+        </property>
+        <property name="pagato_transaz" type="java.lang.String">
+            <column name="pagato_transaz" />
+        </property>
+        <property name="gestito" type="java.lang.Boolean">
+            <column name="gestito" />
+        </property>
+        <property name="gestito_il" type="java.util.Date">
+            <column name="gestito_il" />
+        </property>
+        <property name="d_indirizzo" type="java.lang.String">
+            <column name="d_indirizzo" />
+        </property>
+        <property name="d_localita" type="java.lang.String">
+            <column name="d_localita" />
+        </property>
+        <property name="d_provincia" type="java.lang.String">
+            <column name="d_provincia" />
+        </property>
+        <property name="d_cap" type="java.lang.String">
+            <column name="d_cap" />
+        </property>
+        <property name="d_note" type="java.lang.String">
+            <column name="d_note" />
+        </property>
+        <property name="cod_referente_dest" type="java.lang.String">
+            <column name="cod_referente_dest" />
+        </property>
+        <property name="consegna_fascia_a" type="java.lang.Boolean">
+            <column name="consegna_fascia_a" />
+        </property>
+        <property name="consegna_fascia_b" type="java.lang.Boolean">
+            <column name="consegna_fascia_b" />
+        </property>
+        <property name="consegna_fascia_c" type="java.lang.Boolean">
+            <column name="consegna_fascia_c" />
+        </property>
+        <property name="contrassegno" type="java.lang.Boolean">
+            <column name="contrassegno" />
+        </property>
+        <property name="id_spesesped" type="java.lang.Long">
+            <column name="id_spesesped" />
+        </property>
+        <property name="negozio" type="java.lang.Long">
+            <column name="negozio" />
+        </property>
+    </class>
+</hibernate-mapping>

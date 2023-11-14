@@ -1,0 +1,150 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 3-feb-2016 9.24.06 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="it.gds.point.beans.Prodotto" table="prodotti">
+        <id name="codice_gds" type="java.lang.String">
+            <column name="codice_gds" />
+            <generator class="native" />
+        </id>
+<!--         <property name="codice_gds" type="java.lang.String"> -->
+<!--             <column name="codice_gds" /> -->
+<!--         </property> -->
+        <property name="ean" type="java.lang.String">
+            <column name="ean" />
+        </property>
+        <property name="id_fornitore" type="java.lang.Long">
+            <column name="id_fornitore" />
+        </property>
+        <property name="id_produttore" type="java.lang.Long">
+            <column name="id_produttore" />
+        </property>
+        <property name="titolo" type="java.lang.String">
+            <column name="titolo" />
+        </property>
+        <property name="ivaperc" type="java.lang.Double">
+            <column name="ivaperc" />
+        </property>
+        <property name="ricarico" type="java.lang.Double">
+            <column name="ricarico" />
+        </property>
+        <property name="acquisto_imponibile" type="java.lang.Double">
+            <column name="acquisto_imponibile" />
+        </property>
+        <property name="p_alpubblico_0" type="java.lang.Double">
+            <column name="p_alpubblico_0" />
+        </property>
+        <property name="p_alpubblico_1" type="java.lang.Double">
+            <column name="p_alpubblico_1" />
+        </property>
+        <property name="p_alpubblico_2" type="java.lang.Double">
+            <column name="p_alpubblico_2" />
+        </property>
+        <property name="p_alpubblico_3" type="java.lang.Double">
+            <column name="p_alpubblico_3" />
+        </property>
+        <property name="p_alpubblico_4" type="java.lang.Double">
+            <column name="p_alpubblico_4" />
+        </property>
+        <property name="p_alpubblico_5" type="java.lang.Double">
+            <column name="p_alpubblico_5" />
+        </property>
+        <property name="p_alpubblico_6" type="java.lang.Double">
+            <column name="p_alpubblico_6" />
+        </property>
+        <property name="p_alpubblico_7" type="java.lang.Double">
+            <column name="p_alpubblico_7" />
+        </property>
+        <property name="p_alpubblico_8" type="java.lang.Double">
+            <column name="p_alpubblico_8" />
+        </property>
+        <property name="p_alpubblico_9" type="java.lang.Double">
+            <column name="p_alpubblico_9" />
+        </property>
+        <property name="unita_misura" type="java.lang.String">
+            <column name="unita_misura" />
+        </property>
+        <property name="quantita" type="java.lang.String">
+            <column name="quantita" />
+        </property>
+        <property name="visibile" type="java.lang.Boolean">
+            <column name="visibile" />
+        </property>
+        <property name="categoria_gds" type="java.lang.String">
+            <column name="categoria_gds" />
+        </property>
+        <property name="chiavi_ricerca" type="java.lang.String">
+            <column name="chiavi_ricerca" />
+        </property>
+        <property name="priorita_ricerca" type="java.lang.Integer">
+            <column name="priorita_ricerca" />
+        </property>
+        <property name="nome_immagine" type="java.lang.String">
+            <column name="nome_immagine" />
+        </property>
+        <property name="data_modifica" type="java.util.Date">
+            <column name="data_modifica" />
+        </property>
+        <property name="dettaglio" type="java.lang.String">
+            <column name="dettaglio" />
+        </property>
+        <property name="offerta" type="java.lang.String">
+            <column name="offerta" />
+        </property>
+        <property name="superofferta" type="java.lang.Integer">
+            <column name="superofferta" />
+        </property>
+        <property name="qmvend" type="java.lang.Long">
+            <column name="qmvend" />
+        </property>
+        <property name="visualizza_prezzo_unitario" type="java.lang.Boolean">
+            <column name="visualizza_prezzo_unitario" />
+        </property>
+        <property name="car_immagini" type="java.lang.String">
+            <column name="car_immagini" />
+        </property>
+        <property name="valido_dal" type="java.util.Date">
+            <column name="valido_dal" />
+        </property>
+        <property name="valido_fino_al" type="java.util.Date">
+            <column name="valido_fino_al" />
+        </property>
+        <property name="campo2" type="java.lang.Double">
+            <column name="campo2" />
+        </property>
+        <many-to-one name="marchio" class="it.gds.point.beans.Marchio" fetch="select" lazy="false">
+            <column name="id_marchio" />
+        </many-to-one>
+        <property name="giacenza_magazzino" type="java.lang.Double">
+            <column name="giacenza_magazzino" />
+        </property>
+        <property name="scarico_magazzino" type="java.lang.Double">
+            <column name="scarico_magazzino" />
+        </property>
+        <property name="codice_prodotto_collegato_magazzino" type="java.lang.String">
+            <column name="codice_prodotto_collegato_magazzino" />
+        </property>
+        <property name="azione" type="java.lang.Integer">
+            <column name="azione" />
+        </property>
+        <property name="codice_gds_azione" type="java.lang.String">
+            <column name="codice_gds_azione" />
+        </property>
+        <property name="valore" type="java.lang.Integer">
+            <column name="valore" />
+        </property>
+
+      <set name = "distinta_base" table="prodotti_diba" cascade="all" fetch="select" lazy="false">
+      <key column = "codice_gds"/>
+         <one-to-many class="it.gds.point.beans.DiBa"/>
+      </set>
+
+<!--         <list name="distinta_base" table="prodotti_diba" cascade="all" fetch="select" lazy="false"> -->
+<!--             <key> -->
+<!--                 <column name="codice_gds" /> -->
+<!--             </key> -->
+<!--             <one-to-many class="it.gds.point.beans.DiBa" /> -->
+<!--         </list> -->
+    </class>
+</hibernate-mapping>

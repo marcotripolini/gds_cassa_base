@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 3-feb-2016 9.24.06 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="it.gds.point.beans.DiBa" table="prodotti_diba">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <property name="codice_gds" type="java.lang.String">
+            <column name="codice_gds" />
+        </property>
+        <property name="codice_gds_base" type="java.lang.String">
+            <column name="codice_gds_base" />
+        </property>
+        <property name="quantita" type="java.lang.Double">
+            <column name="quantita" />
+        </property>
+    </class>
+</hibernate-mapping>

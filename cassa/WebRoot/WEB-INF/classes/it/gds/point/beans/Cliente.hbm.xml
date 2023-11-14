@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 26-apr-2016 15.51.24 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="it.gds.point.beans.Cliente" table="clienti">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <property name="email" type="java.lang.String">
+            <column name="email" />
+        </property>
+        <property name="cod_referente" type="java.lang.String">
+            <column name="cod_referente" />
+        </property>
+        <property name="codfiscale" type="java.lang.String">
+            <column name="codfiscale" />
+        </property>
+        <property name="nome" type="java.lang.String">
+            <column name="nome" />
+        </property>
+        <property name="password" type="java.lang.String">
+            <column name="password" />
+        </property>
+        <property name="cognome" type="java.lang.String">
+            <column name="cognome" />
+        </property>
+        <property name="indirizzo" type="java.lang.String">
+            <column name="indirizzo" />
+        </property>
+        <property name="localita" type="java.lang.String">
+            <column name="localita" />
+        </property>
+        <property name="provincia" type="java.lang.String">
+            <column name="provincia" />
+        </property>
+        <property name="cap" type="java.lang.String">
+            <column name="cap" />
+        </property>
+        <property name="telefono_a" type="java.lang.String">
+            <column name="telefono_a" />
+        </property>
+        <property name="telefono_c" type="java.lang.String">
+            <column name="telefono_c" />
+        </property>
+        <property name="attivo" type="java.lang.Boolean">
+            <column name="attivo" />
+        </property>
+        <property name="privacy" type="java.lang.Boolean">
+            <column name="privacy" />
+        </property>
+        <property name="privacy_a" type="java.lang.Boolean">
+            <column name="privacy_a" />
+        </property>
+        <property name="privacy_b" type="java.lang.Boolean">
+            <column name="privacy_b" />
+        </property>
+        <property name="d_nominativo" type="java.lang.String">
+            <column name="d_nominativo" />
+        </property>
+        <property name="d_indirizzo" type="java.lang.String">
+            <column name="d_indirizzo" />
+        </property>
+        <property name="d_localita" type="java.lang.String">
+            <column name="d_localita" />
+        </property>
+        <property name="d_provincia" type="java.lang.String">
+            <column name="d_provincia" />
+        </property>
+        <property name="d_cap" type="java.lang.String">
+            <column name="d_cap" />
+        </property>
+        <property name="d_note" type="java.lang.String">
+            <column name="d_note" />
+        </property>
+        <property name="codice_controllo" type="java.lang.String">
+            <column name="codice_controllo" />
+        </property>
+        <property name="abilita_contrassegno" type="java.lang.Boolean">
+            <column name="abilita_contrassegno" />
+        </property>
+        <many-to-one name="tessera" class="it.gds.point.beans.Tessera" fetch="select" lazy="false">
+            <column name="tessera" />
+        </many-to-one>
+        
+
+    </class>
+</hibernate-mapping>

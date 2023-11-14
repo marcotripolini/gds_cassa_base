@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 26-apr-2016 15.51.24 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="it.gds.point.beans.Tessera" table="tessere">
+        <id name="tessera" type="java.lang.String">
+            <column name="tessera" />
+            <generator class="assigned" />
+        </id>
+        <property name="assign_date" type="java.util.Date">
+            <column name="assign_date" />
+        </property>
+        <property name="last_use_date" type="java.util.Date">
+            <column name="last_use_date" />
+        </property>
+        <property name="score" type="java.lang.Long">
+            <column name="score" />
+        </property>
+        <property name="valore" type="java.lang.Double">
+            <column name="valore" />
+        </property>
+        <property name="codice_alternativo" type="java.lang.String">
+            <column name="codice_alternativo" />
+        </property>
+        <property name="livello_listino" type="java.lang.String">
+            <column name="livello_listino" />
+        </property>
+        <property name="livello_listino_successivo" type="java.lang.String">
+            <column name="livello_listino_successivo" />
+        </property>
+        <property name="tot_fatturato" type="java.lang.Double">
+            <column name="tot_fatturato" />
+        </property>
+        <property name="differenza_x_listino_succ" type="java.lang.Double">
+            <column name="differenza_x_listino_succ" />
+        </property>
+        <property name="periodo_fatturato" type="java.lang.String">
+            <column name="periodo_fatturato" />
+        </property>
+        <property name="livello_tessera" type="java.lang.String">
+            <column name="livello_tessera" />
+        </property>
+        <set name="abbonamenti" table="tessere_abbonamenti" cascade="all" fetch="select" lazy="false">
+            <key>
+                <column name="tessera" />
+            </key>
+            <one-to-many class="it.gds.point.beans.TesseraAbbonamento" />
+        </set>
+
+    </class>
+</hibernate-mapping>

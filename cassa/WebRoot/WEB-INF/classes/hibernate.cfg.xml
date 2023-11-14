@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!--
+			**********************************************************************************
+			Ricordati che le connessioni devono essere uguali sia qui, sia nel file properties
+			Sempre per colpa del cretino.
+			PORCODIO!
+			**********************************************************************************
+		-->
+		<property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+		<property name="hibernate.connection.url">jdbc:mysql://mysql.gds-italia.it/gds-i41_bistrotvigevano</property>
+		<property name="hibernate.connection.username">gds-i41_dbuser</property>
+		<property name="hibernate.connection.password">dbuser01</property>
+		<property name="hibernate.show_sql">false</property>
+	    <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+
+		<!-- C3P0 configuration -->
+		<property name="hibernate.c3p0.acquire_increment">1</property>
+		<property name="hibernate.c3p0.idle_test_period">100</property>
+		<property name="hibernate.c3p0.max_size">10</property>
+		<property name="hibernate.c3p0.max_statements">50</property>
+		<property name="hibernate.c3p0.min_size">1</property>
+		<property name="hibernate.c3p0.timeout">100</property>
+
+		<!-- mapping files -->
+ 		<mapping resource="it/gds/point/beans/Carrellodett.hbm.xml"/>
+ 		<mapping resource="it/gds/point/beans/Categoria.hbm.xml"/>
+ 		<mapping resource="it/gds/point/beans/Cliente.hbm.xml"/>
+ 		<mapping resource="it/gds/point/beans/ClienteInCorso.hbm.xml"/>
+ 		<mapping resource="it/gds/point/beans/Marchio.hbm.xml"/>
+ 		<mapping resource="it/gds/point/beans/NCarrellodett.hbm.xml"/>
+ 		<mapping resource="it/gds/point/beans/Ordine.hbm.xml"/>
+ 		<mapping resource="it/gds/point/beans/OrdineDettagli.hbm.xml"/>
+ 		<mapping resource="it/gds/point/beans/OrdineNegozio.hbm.xml"/>
+ 		<mapping resource="it/gds/point/beans/OrdineNegozioPrint.hbm.xml"/>
+ 		<mapping resource="it/gds/point/beans/OrdineTotem.hbm.xml"/>
+ 		<mapping resource="it/gds/point/beans/Prodotto.hbm.xml"/>
+ 		<mapping resource="it/gds/point/beans/Tessera.hbm.xml"/>
+ 		<mapping resource="it/gds/point/beans/OrdineInAttesa.hbm.xml"/>
+ 		<mapping resource="it/gds/point/beans/Tavolo.hbm.xml"/>
+ 		<mapping resource="it/gds/point/beans/TavoloStatus.hbm.xml"/>
+		<mapping resource="it/gds/point/beans/CodiceSconto.hbm.xml"/>
+		<mapping resource="it/gds/point/beans/TesseraAbbonamento.hbm.xml"/>
+		<mapping resource="it/gds/point/beans/DiBa.hbm.xml"/>
+		<!-- /mapping files -->
+	</session-factory>
+</hibernate-configuration>

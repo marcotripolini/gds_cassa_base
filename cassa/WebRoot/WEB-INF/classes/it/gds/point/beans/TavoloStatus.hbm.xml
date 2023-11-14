@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 26-apr-2016 15.51.24 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="it.gds.point.beans.TavoloStatus" table="status_tavoli_2">
+        <id name="id" type="java.lang.String">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <property name="nome_tavolo" type="java.lang.String">
+            <column name="nometavolo" />
+        </property>
+        <property name="occupato" type="java.lang.Integer">
+            <column name="occupato" />
+        </property>
+    </class>
+</hibernate-mapping>

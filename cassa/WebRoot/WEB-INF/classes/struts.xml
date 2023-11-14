@@ -1,0 +1,186 @@
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+  "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<!-- Abilitata la funzione di debug di Struts2 -->
+	<constant name="struts.devMode" value="true" />
+
+	<constant name="struts.action.excludePattern" value="/rpc,/s/rpc,/s/rp*,/rp*" />
+	<constant name="struts.url.escapeAmp" value="false" />
+	<constant name="struts.locale" value="it_IT" />
+	<constant name="struts.custom.i18n.resources" value="package" />
+	<constant name="struts.ognl.allowStaticMethodAccess" value="true" />
+
+	<package name="General" extends="struts-default,json-default">
+
+		<result-types>
+			<result-type name="json" class="com.googlecode.jsonplugin.JSONResult" />
+		</result-types>
+
+		<action name="scontrino">
+			<result name="success">scontrino.jsp</result>
+		</action>
+
+		<action name="index" class="it.gds.point.actions.ActionIndex" method="execute">
+			<result name="error">index.jsp</result>
+			<result name="success" type="redirectAction">main</result>
+		</action>
+
+		<action name="change_table" class="it.gds.point.actions.ActionTables" method="execute">
+			<result name="error">index.jsp</result>
+			<result name="success" type="redirectAction">index</result>
+		</action>
+
+		<action name="getcard" class="it.gds.point.actions.ActionCard" method="execute">
+			<result name="error">index.jsp</result>
+			<result name="success" type="redirectAction">main</result>
+		</action>
+
+		<action name="scorpora" class="it.gds.point.actions.ActionScorpora" method="execute">
+			<result name="error">index.jsp</result>
+			<result name="success" type="redirectAction">main</result>
+		</action>
+
+		<action name="buttons" class="it.gds.point.actions.ActionIndex" method="execute">
+			<result name="error">buttons.jsp</result>
+			<result name="success" type="redirectAction">main</result>
+		</action>
+
+		<action name="main" class="it.gds.point.actions.ActionMain" method="execute">
+			<result name="success">main.jsp</result>
+			<result name="error" type="redirectAction">index</result>
+		</action>
+
+		<action name="scontrino2" class="it.gds.point.actions.ActionMain" method="execute_scontrino">
+			<result name="success">scontrino2.jsp</result>
+		</action>
+
+		<action name="login" class="it.gds.point.actions.ActionLogin" method="execute">
+			<result name="success" type="redirectAction">main</result>
+			<result name="error" type="redirectAction">index</result>
+		</action>
+
+		<action name="logout" class="it.gds.point.actions.ActionLogout" method="execute">
+			<result name="success" type="redirectAction">index</result>
+		</action>
+
+		<action name="nocard" class="it.gds.point.actions.ActionNoCard" method="execute">
+			<result name="success">no-card.jsp</result>
+		</action>
+
+		<action name="nocardwi" class="it.gds.point.actions.ActionNoCard" method="executeWithItems">
+			<result name="success" type="redirectAction">main</result>
+			<result name="error" type="redirectAction">index</result>
+		</action>
+
+		<action name="sessioniaperte" class="it.gds.point.actions.ActionSessioniAperte" method="execute">
+			<result name="success">sessioni-aperte.jsp</result>
+		</action>
+
+		<action name="scan" class="it.gds.point.actions.ActionScan" method="execute">
+		</action>
+
+		<action name="switch" class="it.gds.point.actions.ActionSwitch" method="execute">
+		</action>
+
+		<action name="noswitch" class="it.gds.point.actions.ActionNoSwitch" method="execute">
+		</action>
+
+		<action name="paymenttype" class="it.gds.point.actions.ActionPaymentType" method="execute">
+		</action>
+
+		<action name="payment" class="it.gds.point.actions.ActionPayment" method="execute">
+		</action>
+
+		<action name="changedelivery" class="it.gds.point.actions.ActionChangeDelivery" method="execute">
+		</action>
+
+		<action name="complete" class="it.gds.point.actions.ActionComplete" method="execute">
+			<result name="success">complete.jsp</result>
+			<result name="error" type="redirectAction">index</result>
+		</action>
+
+		<action name="process" class="it.gds.point.actions.ActionProcess" method="execute">
+			<result name="success">process.jsp</result>
+			<result name="error" type="redirectAction">index</result>
+		</action>
+
+		<action name="admin" class="it.gds.point.actions.ActionAdmin" method="execute">
+			<result name="success">admin.jsp</result>
+			<result name="error" type="redirectAction">index</result>
+		</action>
+
+		<action name="operations" class="it.gds.point.actions.ActionOperations" method="execute">
+		</action>
+
+		<action name="scantessera" class="it.gds.point.actions.ActionScanTessera" method="execute">
+		</action>
+
+		<action name="checkemail" class="it.gds.point.actions.ActionCheckEmail" method="execute">
+		</action>
+
+		<action name="saveuser" class="it.gds.point.actions.ActionSaveUser" method="execute">
+		</action>
+
+		<action name="resettessera" class="it.gds.point.actions.ActionResetTessera" method="execute">
+		</action>
+
+		<action name="newuser" class="it.gds.point.actions.ActionNewUser" method="execute">
+			<result name="success">new-user.jsp</result>
+		</action>
+
+		<action name="barcategorie" class="it.gds.point.actions.ActionBarCategorie" method="execute">
+			<result name="success">bar-categorie.jsp</result>
+		</action>
+
+		<action name="bbarcategorie" class="it.gds.point.actions.ActionBBarCategorie" method="execute">
+			<result name="success">bar-categorie.jsp</result>
+		</action>
+
+		<action name="bprodcategorie" class="it.gds.point.actions.ActionBProdCategorie" method="execute">
+			<result name="success">bar-categorie.jsp</result>
+		</action>
+
+		<action name="bristcategorie" class="it.gds.point.actions.ActionBRistCategorie" method="execute">
+			<result name="success">bar-categorie.jsp</result>
+		</action>
+
+		<action name="barprodotti" class="it.gds.point.actions.ActionBarProdotti" method="execute">
+			<result name="success">bar-prodotti.jsp</result>
+		</action>
+
+		<action name="baraggiungi" class="it.gds.point.actions.ActionBarAggiungi" method="execute">
+		</action>
+
+		<action name="barrimuovi" class="it.gds.point.actions.ActionBarRimuovi" method="execute">
+			<result name="success" type="redirectAction">main</result>
+		</action>
+
+		<action name="abbonamento_scala1" class="it.gds.point.actions.ActionAbbonamenti" method="executeScala_1">
+			<result name="success" type="redirectAction">main</result>
+		</action>
+
+		<action name="barrimuovi1" class="it.gds.point.actions.ActionBarRimuovi" method="execute">
+			<result name="success">rimuovi.jsp</result>
+			<result name="error">error.jsp</result>
+		</action>
+
+		<action name="barmodifica" class="it.gds.point.actions.ActionBarModifica" method="execute">
+			<result name="success" type="redirectAction">main</result>
+		</action>
+
+		<action name="searchcard" class="it.gds.point.actions.ActionFindCard" method="execute">
+			<result name="success" type="json" />
+		</action>
+
+		<action name="searchcard_backup" class="it.gds.point.actions.ActionFindCard" method="execute">
+			<result name="success" type="json" >
+			        <param name="noCache">true</param>
+			        <param name="excludeNullProperties">true</param>
+			        <param name="root">clis</param>
+			</result>
+<!-- 			<result name="success">find_card.jsp</result> -->
+		</action>
+
+	</package>
+</struts>

@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 4-feb-2016 14.17.43 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="it.gds.point.beans.Carrellodett" table="carrellodett">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <property name="id_sito" type="java.lang.Long">
+            <column name="id_sito" />
+        </property>
+        <property name="id_carrello" type="java.lang.Long">
+            <column name="id_carrello" />
+        </property>
+        <property name="id_vetrina" type="java.lang.Long">
+            <column name="id_vetrina" />
+        </property>
+        <property name="codice_gds" type="java.lang.String">
+            <column name="codice_gds" />
+        </property>
+        <property name="prezzo" type="java.lang.Double">
+            <column name="prezzo" />
+        </property>
+        <property name="quantita" type="java.lang.Double">
+            <column name="quantita" />
+        </property>
+        <property name="totale" type="java.lang.Double">
+            <column name="totale" />
+        </property>
+        <property name="descrizione" type="java.lang.String">
+            <column name="descrizione" />
+        </property>
+        <property name="id_ordine" type="java.lang.Long">
+            <column name="id_ordine" />
+        </property>
+        <property name="pagato" type="java.lang.Boolean">
+            <column name="pagato" />
+        </property>
+        <property name="pagato_il" type="java.util.Date">
+            <column name="pagato_il" />
+        </property>
+        <property name="pagato_transaz" type="java.lang.String">
+            <column name="pagato_transaz" />
+        </property>
+        <property name="unita_misura" type="java.lang.String">
+            <column name="unita_misura" />
+        </property>
+        <property name="reparto" type="java.lang.String">
+            <column name="reparto" />
+        </property>
+    </class>
+</hibernate-mapping>

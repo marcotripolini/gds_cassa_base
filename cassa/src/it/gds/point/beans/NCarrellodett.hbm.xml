@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 26-apr-2016 15.51.24 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="it.gds.point.beans.NCarrellodett" table="n_carrellodett">
+        <id name="id" type="java.lang.Long">
+            <column name="id" />
+            <generator class="native" />
+        </id>
+        <property name="id_cliente" type="java.lang.Long">
+            <column name="id_cliente" />
+        </property>
+        <property name="codice_gds" type="java.lang.String">
+            <column name="codice_gds" />
+        </property>
+        <property name="descrizione" type="java.lang.String">
+            <column name="descrizione" />
+        </property>
+        <property name="prezzo" type="java.lang.Double">
+            <column name="prezzo" />
+        </property>
+        <property name="quantita" type="java.lang.Double">
+            <column name="quantita" />
+        </property>
+        <property name="totale" type="java.lang.Double">
+            <column name="totale" />
+        </property>
+        <property name="p_a_peso" type="java.lang.Boolean">
+            <column name="p_a_peso" />
+        </property>
+        <property name="p_totem" type="java.lang.Boolean">
+            <column name="p_totem" />
+        </property>
+        <property name="p_bar" type="java.lang.Boolean">
+            <column name="p_bar" />
+        </property>
+        <property name="id_totem_order" type="java.lang.Long">
+            <column name="id_totem_order" />
+        </property>
+        <property name="datetime_insert" type="java.util.Date">
+            <column name="datetime_insert" />
+        </property>
+        <property name="old" type="java.lang.Boolean">
+            <column name="old" />
+        </property>
+        <property name="order" type="java.lang.Integer">
+            <column name="orderby" />
+        </property>
+        <property name="unita_misura" type="java.lang.String">
+            <column name="unita_misura" />
+        </property>
+        <property name="peso" type="java.lang.Double">
+            <column name="peso" />
+        </property>
+        <property name="reparto" type="java.lang.String">
+            <column name="reparto" />
+        </property>
+    </class>
+</hibernate-mapping>

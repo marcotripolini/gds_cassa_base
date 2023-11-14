@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 26-apr-2016 15.51.24 by Hibernate Tools 3.4.0.CR1 -->
+<hibernate-mapping>
+    <class name="it.gds.point.beans.OrdineInAttesa" table="ordiniinattesa">
+        <id name="ordine" type="java.lang.Long">
+            <column name="ordine" />
+            <generator class="native" />
+        </id>
+        <property name="id_cliente" type="java.lang.Long">
+            <column name="id_cliente" />
+        </property>
+        <property name="nome" type="java.lang.String">
+            <column name="nome" />
+        </property>
+        <property name="cognome" type="java.lang.String">
+            <column name="cognome" />
+        </property>
+        <property name="tessera" type="java.lang.String">
+            <column name="tessera" />
+        </property>
+        <property name="importo" type="java.lang.Double">
+            <column name="importo" />
+        </property>
+        <property name="tavolo" type="java.lang.String">
+            <column name="tavolo" />
+        </property>
+        <property name="quantiarticoli" type="java.lang.Integer">
+            <column name="quantiarticoli" />
+        </property>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2-feb-2016 15.24.54 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="it.gds.point.beans.CodiceSconto" table="codici_sconto">
+        <id name="codice_sconto" type="java.lang.String">
+            <column name="codice_sconto" />
+            <generator class="assigned" />
+        </id>
+        <property name="categorie" type="java.lang.String">
+            <column name="categorie" />
+        </property>
+        <property name="usa_tessera" type="java.lang.Boolean">
+            <column name="usa_tessera" />
+        </property>
+        <property name="sconto_perc" type="java.lang.Double">
+            <column name="sconto_perc" />
+        </property>
+    </class>
+</hibernate-mapping>

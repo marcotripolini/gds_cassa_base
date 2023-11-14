@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2-feb-2016 15.24.54 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="it.gds.point.beans.Categoria" table="categorie">
+        <id name="categoria_gds" type="java.lang.String">
+            <column name="categoria_gds" />
+            <generator class="assigned" />
+        </id>
+        <property name="categoria_1" type="java.lang.String">
+            <column name="categoria_1" />
+        </property>
+        <property name="categoria_2" type="java.lang.String">
+            <column name="categoria_2" />
+        </property>
+        <property name="categoria_3" type="java.lang.String">
+            <column name="categoria_3" />
+        </property>
+        <property name="categoria_4" type="java.lang.String">
+            <column name="categoria_4" />
+        </property>
+        <property name="attiva_sn" type="java.lang.Integer">
+            <column name="attiva_sn" />
+        </property>
+        <property name="tipo" type="java.lang.Integer">
+            <column name="tipo" />
+        </property>
+        <property name="categoria_menu" type="java.lang.String">
+            <column name="categoria_menu" />
+        </property>
+    </class>
+</hibernate-mapping>
